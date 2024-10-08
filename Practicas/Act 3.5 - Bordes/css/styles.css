@@ -1,0 +1,146 @@
+body{
+
+    background-color: rgba(93,158,164,255);
+
+}
+
+.contenido{
+    background-color: white;
+    height: auto;
+    width: 1000px;
+
+}
+
+h1{
+
+    padding-top: 40px;
+    text-align: center;
+
+}
+
+h2{
+
+    padding-left: 40px;
+
+}
+
+.bloque1{
+
+    display: flex;
+    justify-content: space-around;
+    font-size: 40px;
+    margin: 20px;
+
+}
+
+.caja1{
+
+    border: 2px solid black;
+    border-radius: 50px 60px 20px 120px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+.caja2{
+
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+.caja3{
+
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: linear-gradient(to top, #70b1ac, #fff);
+    
+}
+
+.caja4{
+
+    border-radius: 50px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    box-shadow: 0px 0px 40px #6e8991 inset;
+
+}
+
+.caja5{
+
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+.caja6{
+
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+.bloque2{
+
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+}
+
+.caja7{
+
+    border-radius: 35px;
+    box-shadow: 5px 5px 10px #4d6066;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.caja8{
+
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.caja9{
+
+    border: 2px solid black;
+    border-radius: 50px;
+    text-shadow: 5px 5px 5px rgb(105, 105, 105);
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.caja10{
+
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px;
+
+    background-image: linear-gradient(to right, white, rgba(106,166,167,255));
+}
+
+footer{
+
+    font-size: 25px;
+    text-align: center;
+    padding: 30px;
+
+}
