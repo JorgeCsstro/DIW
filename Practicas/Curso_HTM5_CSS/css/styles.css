@@ -1,27 +1,28 @@
-.contenedor{
+main{
 
     width: 1000px;
     height:fit-content;
     background-color: darkgrey;
+    padding: 15px;
+    box-sizing: border-box;
 
 }
 
 /*--ENCABEZADO--*/
 
-.encabezado{
-
+header {
     display: flex;
     align-items: flex-start;
     width: 100%;
     height: fit-content;
-    background-image: url("./../imgs/logo.png");
+    background-image: url("./../img/logo.png"), linear-gradient(to top, #379fd5, #0870b7);
     background-repeat: no-repeat;
-    background-position-x: 20px;
-    background-position-y: center;
-    background-color: rgba(49,59,68,255);
+    background-position: 20px center, 0 0;
     border-bottom: solid 10px black;
-
+    border-radius: 35px 35px 0px 0px ;
 }
+
+
 
 .titulo{
 
@@ -33,25 +34,25 @@
 
 /*--MENUS--*/
 
-.menu{
+nav{
 
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
     height: fit-content;
-    background-image: url("./../imgs/red015.jpg");
+    background-image: url("./../img/red015.jpg");
     text-align: center;
 
 }
 
-.menu-texto:hover{
+.nav-texto:hover{
 
     color: rgba(192,192,192,255);
 
 }
 
-.menu-texto{
+.nav-texto{
 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
@@ -59,7 +60,7 @@
 
 }
 
-.menu img{
+nav img{
 
     margin-top: 10px;
 
@@ -67,17 +68,17 @@
 
 /* PAGINA PRINCIPAL*/
 
-.pagina-principal{
+article{
 
     display: flex;
     width: 100%;
     height: fit-content;
-    background-image: url("./../imgs/lgrey008.jpg");
+    background-image: url("./../img/lgrey008.jpg");
     text-align: center;
 
 }
 
-.pagina-principal > div{
+article > div{
 
     margin: 40px;
     padding-top: 10px;
@@ -94,7 +95,7 @@ h1{
 
 }
 
-.text-articulo{
+text{
 
     display: flex;
     text-align: center;

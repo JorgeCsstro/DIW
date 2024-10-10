@@ -4,43 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de HTML y CSS</title>
-    <link rel="icon" type="image/x-icon" href="./imgs/logo.png">
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <div class="contenedor">
-        <div class="encabezado">
+    <main>
+        <header>
             <h1 class="titulo">Curso de HTML5 y CSS3</h1>
+        </header>
 
-        </div>
-
-        <div class="menu">
-
+        <nav>
             <div class="contenidos">
-                <a href=""><img src="./imgs/book.png"></a>
-                <p class="menu-texto">Contenidos</p>
+                <a href=""><img src="./img/book.png"></a>
+                <p class="nav-texto">Contenidos</p>
             </div>
 
             <div class="videos">
-                <a href=""><img src="./imgs/film.png"></a>
-                <p class="menu-texto">Vídeos</p>
+                <a href=""><img src="./img/film.png"></a>
+                <p class="nav-texto">Vídeos</p>
             </div>
 
             <div class="contacto">
-                <a href=""><img src="./imgs/mail.png"></a>
-                <p class="menu-texto">Contacto</p>
+                <a href=""><img src="./img/mail.png"></a>
+                <p class="nav-texto">Contacto</p>
             </div>
 
-        </div>
-        <div class="pagina-principal">
-            <div class="html5">
-
-                <div class="html-image">
-                    <img src="./imgs/html5.png">
+        </nav>
+        <article>
+            <div class="html">
+                <div>
+                    <img src="./img/html5.png">
                     <h1>HTML5</h1>
                 </div>
-
-                <div class="text-articulo">
+                <text>
                     <p>
                         Veremos los nuevos <b>elementos
                         estructurales</b>, así como los nuevos
@@ -50,41 +46,47 @@
                         abre un nuevo mundo de posibilidades en
                         el desarrollo de videojuegos
                     </p>
-                </div>
+                </text>
             </div>
-            <div class="css3">
-                <div class="css-image">
-                    <img src="./imgs/css3.png">
+
+
+            <div class="css">
+                <div>
+                    <img src="./img/css3.png">
                     <h1>CSS3</h1>
                 </div>
 
-                <div class="text-articulo">
+                <text>
                     <p>
                         Mejoraremos nuestros diseños web utilizando las nuevas características de CSS3: <b>efectos, transformaciones, animaciones,</b> etc.
                         Con <b>CSS3</b> nuestros diseños serán más simples, pero no menos impactantes
                     </p>
-                </div>
+                </text>
             </div>
+
+
             <div class="js">
-                <div class="js-image">
-                    <img src="./imgs/javascript.png">
+                <div>
+                    <img src="./img/javascript.png">
                     <h1>JavaScript</h1>
                 </div>
 
-                <div class="text-articulo">
+                <text>
                     <p>
                         Junto con HTML5 aparecen nuevas <b>API javascript</b> que nos aportan multitud de facilidades y posibilidades en el desarrollo de nuestros proyectos web.
                         Con las nuevas API javascript nuestras manos dejarán de estar atadas.
                     </p>
-                </div>
+                </text>
             </div>
-        </div>
+
+        </article>
+        
         <footer>
             <pre>
                 HTML5 y CSS3.
                 Diseño de interfaces web - 2DAW
             </pre>
         </footer>
-    </div>
+    </main>
 </body>
 </html>
