@@ -16,9 +16,11 @@
 
 }
 
-ul.navegacion{
+.navegacion{
 
-    display: inline;
-    font-size: 30px;
+    display: inline-flex;
+
+    font-size: 20px;
+    margin-left: 20px;  
 
 }
