@@ -1,7 +1,6 @@
 
-body > div{
-
-    width: 1000px;
+body{
+    
     height:fit-content;
     background: linear-gradient(rgba(215,78,51,255), white);
     padding: 15px;
@@ -10,11 +9,17 @@ body > div{
 
 }
 
-main{
-    
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
     border-radius: 35px;
     box-shadow: 10px 10px 10px gray;
-
+    
 }
 
 
@@ -45,7 +50,6 @@ header {
 nav{
 
     display: flex;
-    align-items: flex-start;
     justify-content: space-around;
     width: 100%;
     height: fit-content;
@@ -76,7 +80,7 @@ nav img{
 
 /* PAGINA PRINCIPAL*/
 
-article{
+section{
 
     display: flex;
     width: 100%;
@@ -86,17 +90,37 @@ article{
 
 }
 
-article > div{
+section > article{
 
     border-style: solid;
+    border-width: 70px 20px 50px 20px;
     border-image: url(../img/movil.png);
+    border-image-slice: 70 20 50 20;
     border-image-repeat: stretch;
-    margin: 40px;
+    margin: 50px;
     padding-top: 10px;
-    width: 500px;
+    width: 300px;
     justify-content: space-around;
     background-color: white;
     
+
+}
+
+figure{
+
+    margin: 0px;
+
+}
+
+figure > img{
+
+    width: 300px;
+
+}
+
+.img-js{
+
+    background-image: radial-gradient(red, yellow, green);
 
 }
 
@@ -129,5 +153,6 @@ footer{
     padding-top: 5px;
     padding-bottom: 1px;
     color: white;
+    width: 100%;
 
 }
