@@ -6,7 +6,7 @@ body {
 
 .contenedor{
 
-    width: 750px;
+    width: 800px;
     height: fit-content;
     border: 5px solid black;
 
@@ -14,13 +14,12 @@ body {
 .pagina{
 
     margin: 10px;
-    background-color: rgb(220, 220, 220);
-
 }
 
 header {
     text-align: left;
     border-bottom: 2px solid black;
+    padding-left: 30px;
 }
 
 nav ul {
@@ -36,17 +35,48 @@ nav li {
 
 main {
     display: flex;
+    margin-left: 25px;
 }
 
-.lorem2 {
+.fecha{
+
+    font-size: 16px;
+
+}
+
+.lorem{
+
+    margin-bottom: 30px;
+
+}
+
+.loremText {
     width: 500px;
+    background-color: rgb(220, 220, 220);
+    padding: 5px; 
+    padding-left: 20px;  
+}
+
+.loremText h2{
+
+    font-size: 20px
+
 }
 
 aside {
     flex: 1;
     margin-left: 20px;
+    font-size: 18px;
+}
+
+.acerca .name{
+
+    margin-left: 40px;
+
 }
 
 footer {
+    border-top: 1px solid black;
     text-align: center;
+    font-size: 20px;
 }
