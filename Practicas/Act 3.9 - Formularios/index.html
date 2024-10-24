@@ -15,35 +15,39 @@
             <input type="text" name="nombre" id="nombre" required>
 
             <label for="email">Mi email es:</label>
-            <input type="email" name="email" id="email" required>
+            <p>(Puedes introducir varios separados por comas)</p>
+            <input type="email" name="email" id="email" required multiple>
 
-            <label>
-                <input type="checkbox" name="recuerdame"> Recuérdame en este equipo
-            </label>
+            <label>Recuérdame en este equipo</label>
+            <input type="checkbox" name="recuerdame">
 
             <label for="website">Mi dirección web es:</label>
-            <input type="text" name="website" id="website">
+            <input type="text" name="website" id="website" placeholder="http://ejemplo.com">
 
             <label for="password">Me gustaría que mi password fuera:</label>
-            <input type="password" name="password" id="password" required>
+            <p>(Al menos 6 carácteres, sin espacios)</p>
+            <input type="password" name="password" id="password" minlength="6" pattern="^\S+$" required>
 
             <label for="password_repeat">Mi password repetida es:</label>
             <input type="password" name="password_repeat" id="password_repeat" required>
 
             <label for="conocimientos">En una escala de 1 a 10, mis conocimientos de HTML5 son:</label>
-            <input type="number" name="conocimientos" id="conocimientos" min="1" max="10" required>
+            <input type="range" name="conocimientos" id="conocimientos" min="1" max="10">
 
             <label for="fecha">Por favor, inicia mi suscripción el día:</label>
-            <input type="date" name="fecha" id="fecha">
+            <input type="date" name="fecha" id="fecha" required>
 
-            <label for="copias">Me gustaría recibir</label>
-            <input type="number" name="copias" id="copias" value="1" min="1" required> copias de <i>El manual de HTML5</i>.
+            <section>
+                <label for="copias">Me gustaría recibir</label>
+                <input type="number" name="copias" id="copias" value="1" min="1" max="5"> copias de <i>El manual de HTML5</i>.
+            </section>
+        
 
-            <label>
-                <input type="checkbox" name="css3"> También registrarme para <i>El manual de CSS3</i>
-            </label>
+            <label> También registrarme para <i>El manual de CSS3</i></label>
+            <input type="checkbox" name="css3">
+            
 
-            <button type="submit">ENVIAME</button>
+            <button type="submit"><i>ENVÍAME</i></button>
         </form>
     </main>
 </body>
