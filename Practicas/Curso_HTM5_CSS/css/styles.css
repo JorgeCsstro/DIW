@@ -23,7 +23,7 @@ main {
 }
 
 
-/*--ENCABEZADO--*/
+/*------ HEADER ------*/
 
 header {
     display: flex;
@@ -46,6 +46,7 @@ header > h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     margin-left: 20px;
+    font-size: 36px;
     
 }
 
@@ -54,38 +55,92 @@ header > img {
     margin-right: 20px;
 }
 
-/*--MENUS--*/
+/*------ MENUS ------*/
 
-nav{
-
+nav {
     display: flex;
     justify-content: space-around;
     width: 100%;
     height: fit-content;
     background: linear-gradient(to top, #ffdc40, #ab901a);
     text-align: center;
-
-}
-
-ul > p:hover{
-
-    color: rgba(192,192,192,255);
-
-}
-
-ul > p{
-
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    color: white;
-
+    position: relative;
 }
 
 nav img{
+    margin-top: 20px;
+}
 
-    margin-top: 10px;
+ul{
+
+    margin: 0;
 
 }
+
+ul > p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    width: fit-content;
+    color: white;
+    text-shadow: 0px 0px 5px white;
+    transition: text-shadow 0.5s ease;
+}
+
+ul > p:hover {
+    text-shadow: 2px 2px 0px red;
+}
+
+/*--- SUBMENU VIDEO ---*/
+
+.videos:hover .submenuVid {
+    display: block;
+}
+
+.submenuVid {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #e34c26;
+    border-radius: 0 0 10px 10px;
+    padding: 5px 0;
+    width: 100px;
+    text-align: center;
+    z-index: 10;
+}
+
+
+/* Triangulo */
+.submenuVid::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #e34c26;
+}
+
+.submenuVid li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.submenuVid li:nth-child(odd) {
+    background-color: #f06529;
+}
+
+.submenuVid li:hover{
+    background-color: #ff7e42;
+}
+
+.submenuVid li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 5px 10px;
+}
+
 
 /* PAGINA PRINCIPAL*/
 
