@@ -1,103 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de HTML y CSS</title>
+    <title>Videos - Curso de HTML y CSS</title>
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/stylesVideos.css">
 </head>
-
 <body>
+    <header>
+        <a href="./index.html"><img src="./img/logo.png" alt="Logo del curso"></a>
+        <h1>Curso de HTML5 y CSS3</h1>
+    </header>
+    <nav>
+        <ul>
+            <a href=""><img src="./img/book.png"></a>
+            <p>Contenidos</p>
+        </ul>
+
+        <ul class="videos">
+            <a href="#video1"><img src="./img/film.png"></a>
+            <p>Vídeos</p>
+<<<<<<< HEAD
+=======
+            <!-- Submenu -->
+>>>>>>> 38099b6b9d60531b0b8a39a638cb04a3ef3805eb
+            <ul class="submenuVid">
+                <li><a href="#video1">Video 1</a></li>
+                <li><a href="#video2">Video 2</a></li>
+                <li><a href="#video3">Video 3</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href=""><img src="./img/mail.png"></a>
+            <p>Contacto</p>
+        </ul>
+    </nav>
     <main>
-        <header>
-            <img src="./img/logo.png" alt="Logo del curso">
-            <h1>Curso de HTML5 y CSS3</h1>
-        </header>
-
+        <div id="reproductor">
+            <!-- Video 1 -->
+            <div id="video1" class="video-container">
+                <video width="80%" height="600" controls>
+                    <source src="./videos/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Video 2 -->
+            <div id="video2" class="video-container">
+                <video width="80%" height="600" controls>
+                    <source src="./videos/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <!-- Video 3 -->
+            <div id="video3" class="video-container">
+                <video width="80%" height="600" controls>
+                    <source src="./videos/video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
         <nav>
-            <ul>
-                <a href=""><img src="./img/book.png"></a>
-                <p>Contenidos</p>
-            </ul>
-        
-            <ul class="videos">
-                <a href=""><img src="./img/film.png"></a>
-                <p>Vídeos</p>
-                <!-- Submenu -->
-                <ul class="submenuVid">
-                    <li><a href="">Video 1</a></li>
-                    <li><a href="">Video 2</a></li>
-                    <li><a href="">Video 3</a></li>
-                </ul>
-            </ul>
-        
-            <ul>
-                <a href=""><img src="./img/mail.png"></a>
-                <p>Contacto</p>
-            </ul>
+            <input type="button" id="reiniciar" value="reiniciar">
+            <input type="button" id="retrasar" value="&laquo;">
+            <input type="button" id="play" value="&#9658;">
+            <input type="button" id="adelantar" value="&raquo;">
+            <input type="button" id="silenciar" value="silenciar">
+            <label>Volumen</label>
+            <input type="button" id="menosVolumen" value="-">
+            <input type="button" id="masVolumen" value="+">
         </nav>
-        <section>
-            <article>
-                <img src="./img/chincheta.png">
-
-                <img src="./img/html5.png">
-
-                <h1>HTML5</h1>
-
-                <text>
-                    <p>
-                        Veremos los nuevos <b>elementos
-                            estructurales</b>, así como los nuevos
-                        elementos existentes para
-                        <b>formularios, audio y vídeo.</b>
-                        El <b>nuevo elemento canvas</b> nos
-                        abre un nuevo mundo de posibilidades en
-                        el desarrollo de videojuegos
-                    </p>
-                </text>
-            </article>
-
-            <article>
-                <img src="./img/chincheta.png">
-
-                <img src="./img/css3.png">
-
-                <h1>CSS3</h1>
-
-                <text>
-                    <p>
-                        Mejoraremos nuestros diseños web utilizando las nuevas características de CSS3: <b>efectos,
-                            transformaciones, animaciones,</b> etc.
-                        Con <b>CSS3</b> nuestros diseños serán más simples, pero no menos impactantes
-                    </p>
-                </text>
-            </article>
-
-            <article>
-                <img src="./img/chincheta.png">
-                <img src="./img/javascript.png" class="img-js">
-
-                <h1>JavaScript</h1>
-
-                <text>
-                    <p>
-                        Junto con HTML5 aparecen nuevas <b>API javascript</b> que nos aportan multitud de facilidades y
-                        posibilidades en el desarrollo de nuestros proyectos web.
-                        Con las nuevas API javascript nuestras manos dejarán de estar atadas.
-                    </p>
-                </text>
-            </article>
-        </section>
-
-        <footer>
-            <pre>
-                HTML5 y CSS3.
-                Diseño de interfaces web - 2DAW
-            </pre>
-        </footer>
     </main>
+    <footer>
+        <pre>
+            HTML5 y CSS3.
+            Diseño de interfaces web - 2DAW
+        </pre>
+    </footer>
 </body>
-
 </html>
