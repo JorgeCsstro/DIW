@@ -1,0 +1,213 @@
+body {
+    height: fit-content;
+    width: 1500px;
+    background: linear-gradient(rgba(215, 78, 51, 255), white);
+    padding: 15px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    margin-left: 200px;
+}
+
+main {
+    display: flex; /* Positions child elements (reproductor and nav) side by side */
+    justify-content: center; /* Centers main content horizontally */
+    align-items: flex-start; /* Aligns child elements to the top */
+    margin: auto;
+    width: fit-content;
+    gap: 20px; /* Adds space between reproductor and nav */
+    
+}
+
+/*------ HEADER ------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #3e9bc9, #0870b7);
+    border-bottom: solid 10px black;
+    border-radius: 35px 35px 0 0;
+}
+
+header > * {
+    padding: 20px;
+}
+
+header > h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    margin-left: 20px;
+    font-size: 36px;
+}
+
+header > img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+/*------ MENUS ------*/
+
+body > nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #ffdc40, #ab901a);
+    text-align: center;
+    position: relative;
+}
+
+nav img {
+    margin-top: 20px;
+}
+
+ul {
+    margin: 0;
+}
+
+ul > p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    width: fit-content;
+    color: white;
+    text-shadow: 0 0 5px white;
+    transition: text-shadow 0.5s ease;
+}
+
+ul > p:hover {
+    text-shadow: 2px 2px 0 red;
+}
+
+/*--- SUBMENU VIDEO ---*/
+
+.videos:hover .submenuVid {
+    display: block;
+}
+
+.submenuVid {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #e34c26;
+    border-radius: 0 0 10px 10px;
+    padding: 5px 0;
+    width: 100px;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Triangle */
+.submenuVid::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #e34c26;
+}
+
+.submenuVid li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.submenuVid li:nth-child(odd) {
+    background-color: #f06529;
+}
+
+.submenuVid li:hover {
+    background-color: #ff7e42;
+}
+
+.submenuVid li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 5px 10px;
+}
+
+/*------ VIDEO PLAYER ------*/
+
+#reproductor {
+    display: flex;
+    flex-direction: column; /* Ensures video and progress bar stack vertically */
+    align-items: center;
+    border: 10px solid lightgrey; /* Light grey border of 10px */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Adds some space inside the border */
+    margin: 30px;
+}
+
+main nav {
+    display: flex;
+    flex-direction: column; /* Stacks buttons in a column */
+    gap: 10px; /* Adds space between buttons */
+    align-items: center; /* Centers buttons horizontally */
+    padding: 10px;
+    background-color: transparent; /* Removes background */
+    margin-top: 150px;
+}
+
+/* Add a top border to the barra div */
+#barra {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-top: 10px solid lightgrey; /* 10px top border */
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Adjust the progress bar to match the video progress */
+#progreso {
+    width: 0;
+    height: 100%;
+    background-color: #0870b7;
+    transition: width 0.3s ease;
+}
+
+/* Style for the navigation buttons */
+nav input[type="button"] {
+    font-size: 16px;
+    padding: 10px 20px; /* Increased padding for better button appearance */
+    border: none;
+    background-color: red; /* Sets button background to red */
+    color: white;
+    border-radius: 12px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+nav input[type="button"]:hover {
+    background-color: darkred; /* Dark red on hover */
+}
+
+/*------ FOOTER ------*/
+
+footer {
+    background: linear-gradient(to bottom, #3e9bc9, #0870b7);
+    border-top: solid 10px black;
+    border-radius: 0 0 35px 35px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    color: white;
+    width: 100%;
+}
+
+/*------ Video Switching Styles (Using :target) ------*/
+
+/* Hide all videos by default */
+.video-container {
+    display: none;
+}
+
+/* Show the video when its respective target is active */
+#video1:target, #video2:target, #video3:target {
+    display: block;
+}
