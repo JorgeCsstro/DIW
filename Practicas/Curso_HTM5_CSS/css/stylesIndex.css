@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "LuckiestGuy";
+    src: url("../fuentes/LuckiestGuy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Abel";
+    src: url("../fuentes/Abel-Regular.ttf");
+}
 
 body{
     
@@ -43,7 +52,8 @@ header > *{
 }
 
 header > h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: LuckiestGuy;
+    letter-spacing: 5px;
     color: white;
     margin-left: 20px;
     font-size: 36px;
@@ -78,16 +88,17 @@ ul{
 }
 
 ul > p {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: LuckiestGuy;
+    letter-spacing: 5px;
     font-size: 28px;
     width: fit-content;
     color: white;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 2px 2px #f06529;
     transition: text-shadow 0.5s ease;
 }
 
 ul > p:hover {
-    text-shadow: 2px 2px 0px red;
+    text-shadow: 0px 0px 5px #ff7e42;
 }
 
 /*--- SUBMENU VIDEO ---*/
@@ -168,6 +179,7 @@ article {
     width: 300px;
     justify-content: space-around;
     background-color: white;
+    
 }
 
 article:nth-of-type(1){
@@ -213,10 +225,17 @@ article img:nth-child(2){
 
 }
 
-
-h1{
+article > h1 {
 
     font-size: 25px;
+    font-family: Abel;
+
+}
+
+article > text{
+
+    font-size: 20px;
+    font-family: Abel;
 
 }
 
