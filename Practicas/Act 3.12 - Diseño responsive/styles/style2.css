@@ -8,10 +8,10 @@ body {
     min-height: 100vh;
     background-color: #f5f5f5;
 }
-  
+
 .contenedor {
     display: flex;
-    flex-wrap: wrap; /* Permite que los bloques se reubiquen automáticamente */
+    flex-wrap: wrap;
     max-width: 1200px;
     padding: 16px;
     box-sizing: border-box;
@@ -19,7 +19,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-  
+
 .bloque {
     flex: 1 1 300px;
     max-width: 33%;
@@ -29,15 +29,29 @@ body {
     text-align: center;
     padding: 16px;
 }
-  
+
 .bloque img {
     max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto 8px;
 }
-  
+
 .bloque p {
     margin: 0;
     color: #333;
+}
+
+/* Media query para pantallas menores a 800px */
+@media (max-width: 800px) {
+    .contenedor {
+        flex-direction: column; /* Cambiamos la orientación a vertical */
+        align-items: center; /*Centramos los elementos*/
+    }
+
+    .bloque {
+        display: block;
+        width: auto; /* El ancho se ajusta automaticamente */
+        margin: 20px; /* Agregamos margen a los lados */
+    }
 }
