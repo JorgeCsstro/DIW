@@ -1,0 +1,202 @@
+body {
+    height: fit-content;
+    width: 1500px;
+    background: linear-gradient(rgba(215, 78, 51, 255), white);
+    padding: 15px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    margin-left: 200px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    gap: 20px;
+    background-image: url("../img/fondoForm.jpg");
+    background-size: 1500px 100%;
+    background-repeat: no-repeat;
+}
+
+/*------ HEADER ------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #3e9bc9, #0870b7);
+    border-bottom: solid 10px black;
+    border-radius: 35px 35px 0 0;
+}
+
+header > * {
+    padding: 20px;
+}
+
+header > h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    margin-left: 20px;
+    font-size: 36px;
+}
+
+header > img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+/*------ MENUS ------*/
+
+body > nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #ffdc40, #ab901a);
+    text-align: center;
+    position: relative;
+}
+
+nav img {
+    margin-top: 20px;
+}
+
+ul {
+    margin: 0;
+}
+
+ul > p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    width: fit-content;
+    color: white;
+    text-shadow: 0 0 5px white;
+    transition: text-shadow 0.5s ease;
+}
+
+ul > p:hover {
+    text-shadow: 2px 2px 0 red;
+}
+
+/*--- SUBMENU VIDEO ---*/
+
+.videos:hover .submenuVid {
+    display: block;
+}
+
+.submenuVid {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #e34c26;
+    border-radius: 0 0 10px 10px;
+    padding: 5px 0;
+    width: 100px;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Triangle */
+.submenuVid::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #e34c26;
+}
+
+.submenuVid li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.submenuVid li:nth-child(odd) {
+    background-color: #f06529;
+}
+
+.submenuVid li:hover {
+    background-color: #ff7e42;
+}
+
+.submenuVid li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 5px 10px;
+}
+
+/*--- FORM ---*/
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 1000px;
+    background: rgba(217, 217, 217, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    border: 4px solid #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+    padding: 10px;
+    border: 0px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: rgb(215, 215, 215);
+}
+
+.form-img {
+    width: 50px;
+    height: 50px;
+    object-fit:cover;
+    margin-left: 20px;
+}
+
+.form button {
+    padding: 10px 20px;
+    background-color: #0870b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+    background-color: #055a87;
+}
+
+/*------ FOOTER ------*/
+
+footer {
+    background: linear-gradient(to bottom, #3e9bc9, #0870b7);
+    border-top: solid 10px black;
+    border-radius: 0 0 35px 35px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    color: white;
+    width: 100%;
+}
