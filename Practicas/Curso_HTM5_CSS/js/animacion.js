@@ -9,6 +9,7 @@ function mueveChincheta1() {
         // Mueve a la izquierda 250px
         chincheta1.style.left = '250px';
     }, 0);
+    // 0 milisegundos de retardo
 }
 
 function animArticle1() {
@@ -17,6 +18,7 @@ function animArticle1() {
         const article1 = document.querySelector('article:nth-of-type(1)');
         article1.classList.add('article1'); 
     }, 1000);
+    // 1000 milisegundos de retardo
 }
 
 function mueveChincheta2() {
@@ -30,6 +32,7 @@ function mueveChincheta2() {
         // Mueve la chincheta a la posición 150px
         chincheta2.style.left = '150px';
     }, 1050);
+    // 1050 milisegundos de retardo
 }
 
 function mueveChincheta3() {
@@ -43,6 +46,7 @@ function mueveChincheta3() {
         // Mueve la chincheta a la izquierda 50px
         chincheta3.style.left = '50px';
     }, 2000);
+    // 2000 milisegundos de retardo
 }
 
 function animArticle3() {
@@ -51,4 +55,5 @@ function animArticle3() {
         const article3 = document.querySelector('article:nth-of-type(3)');
         article3.classList.add('article3'); 
     }, 3000);
+    // 3000 milisegundos de retardo
 }
