@@ -62,7 +62,7 @@ header > h1 {
     
 }
 
-header > img {
+header > a > img {
     width: 70px;
     margin-right: 20px;
 }
