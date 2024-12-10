@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Margen entre elementos */
+body > * {
+    margin: 5px;
+}
+
+nav {
+    flex: 1 1 100%; /* Toma 100% del ancho */
+    background-color: #4a4a4a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+header {
+    flex: 1 1 100%; /* Toma 100% del ancho */
+    background-color: #00356e;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    flex: 2 1 calc(75% - 10px);/* Toma 3/4 del ancho */
+    background-color: #cccccc;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+aside {
+    flex: 1 1 calc(25% - 10px);/* Toma 1/4 del ancho */
+    background-color: #aaaaaa;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Estilo para pantallas más pequeñas */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+    }
+
+    nav, header, main, aside {
+        flex: 1 1 100%; /* Todos los elementos ocupan un 100% de el ancho */
+        margin: 5px 0;
+    }
+}
