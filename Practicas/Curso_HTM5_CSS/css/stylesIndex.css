@@ -8,14 +8,12 @@
     src: url("../fuentes/Abel-Regular.ttf");
 }
 
-body{
-    
-    height:fit-content;
-    background: linear-gradient(rgba(215,78,51,255), white);
-    padding: 15px;
-    padding-right: 25px;
+body {
+    height: fit-content;
+    background: linear-gradient(rgba(215, 78, 51, 255), white);
+    padding: 1em 1.5em;
     box-sizing: border-box;
-
+    font-size: 16px;
 }
 
 main {
@@ -25,15 +23,12 @@ main {
     align-items: center;
     margin: auto;
     height: fit-content;
-    width: fit-content;
-    border-radius: 35px;
-    box-shadow: 10px 10px 10px gray;
-    
+    width: 90%;
+    border-radius: 2em;
+    box-shadow: 0.5em 0.5em 0.5em gray;
 }
 
-
 /*------ HEADER ------*/
-
 header {
     display: flex;
     align-items: center;
@@ -41,23 +36,21 @@ header {
     width: 100%;
     height: fit-content;
     background: linear-gradient(to top, #3e9bc9, #0870b7);
-    border-bottom: solid 10px black;
-    border-radius: 35px 35px 0px 0px;
+    border-bottom: solid 0.5em black;
+    border-radius: 2em 2em 0 0;
+    padding: 1em;
 }
 
-header > *{
-
-    padding: 20px;
-
+header > * {
+    margin: 0.5em;
 }
 
 header > h1 {
     font-family: LuckiestGuy;
-    letter-spacing: 5px;
+    letter-spacing: 0.3em;
     color: white;
-    margin-left: 20px;
-    font-size: 36px;
-    
+    margin-left: 1em;
+    font-size: 2rem;
 }
 
 @keyframes rotateLogo {
@@ -73,13 +66,12 @@ header > h1 {
 }
 
 header > a > img {
-    width: 70px;
-    margin-right: 20px;
+    width: 4rem;
+    margin-right: 1em;
     animation: rotateLogo 5s infinite;
 }
 
 /*------ MENUS ------*/
-
 nav {
     display: flex;
     justify-content: space-around;
@@ -88,33 +80,38 @@ nav {
     background: linear-gradient(to top, #ffdc40, #ab901a);
     text-align: center;
     position: relative;
+    padding: 1em;
 }
 
-nav img{
-    margin-top: 20px;
+nav img {
+    margin-top: 1em;
+    width: 2rem;
 }
 
-ul{
-
+ul {
     margin: 0;
-
+    padding: 0;
+    list-style: none;
 }
 
 ul > p {
     font-family: LuckiestGuy;
-    letter-spacing: 5px;
-    font-size: 28px;
-    width: fit-content;
+    letter-spacing: 0.2em;
+    font-size: 1.5rem;
     color: white;
-    text-shadow: 2px 2px #f06529;
+    text-shadow: 0.1em 0.1em #f06529;
     transition: text-shadow 0.5s ease;
 }
 
 ul > p:hover {
-    text-shadow: 0px 0px 5px #ff7e42;
+    text-shadow: 0 0 0.3em #ff7e42;
 }
 
 /*--- SUBMENU VIDEO ---*/
+
+.videos {
+    position: relative;
+}
 
 .videos:hover .submenuVid {
     display: block;
@@ -124,78 +121,71 @@ ul > p:hover {
     display: none;
     position: absolute;
     top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     background: #e34c26;
-    border-radius: 0 0 10px 10px;
-    padding: 5px 0;
-    width: 100px;
+    border-radius: 0 0 0.5em 0.5em;
+    padding: 0.5em 0;
+    width: 6em;
     text-align: center;
     z-index: 10;
 }
-
 
 /* Triangulo */
 .submenuVid::before {
     content: "";
     position: absolute;
-    top: -10px;
+    top: -0.5em;
     transform: translateX(-50%);
-    border-left: 7px solid transparent;
-    border-right: 7px solid transparent;
-    border-bottom: 10px solid #e34c26;
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.5em solid #e34c26;
 }
 
 .submenuVid li {
-    list-style: none;
-    margin: 5px 0;
+    margin: 0.2em 0;
 }
 
 .submenuVid li:nth-child(odd) {
     background-color: #f06529;
 }
 
-.submenuVid li:hover{
+.submenuVid li:hover {
     background-color: #ff7e42;
 }
 
 .submenuVid li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
     display: block;
-    padding: 5px 10px;
+    padding: 0.5em;
 }
 
-
-/* PAGINA PRINCIPAL*/
-
-section{
-
+/* PAGINA PRINCIPAL */
+section {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     height: fit-content;
     background-color: white;
     text-align: center;
-
+    padding: 1em;
+    gap: 1em;
 }
 
 article {
     position: relative;
-    border-style: solid;
-    border-width: 70px 20px 50px 20px;
-    border-image: url(../img/movil.png);
-    border-image-slice: 70 20 50 20;
-    border-image-repeat: stretch;
-    margin: 50px;
-    margin-left: 75px;
-    margin-right: 75px;
-    padding-top: 10px;
-    width: 300px;
-    justify-content: space-around;
+    border: 2em solid transparent;
+    border-image: url(../img/movil.png) 50 20 50 20 stretch;
+    margin: 2em;
+    padding-top: 1em;
+    width: calc(100% / 4 - 2em);
     background-color: white;
-    
 }
 
-/*Animaciones de articulos*/
+/* Animaciones de articulos */
 @keyframes animArticle1 {
     0% {
         transform: rotate(0deg);
@@ -242,13 +232,13 @@ article:nth-of-type(3){
 .chincheta1 {
     position: absolute;
     left: 0px;
-    top: -15%;
+    top: -10%;
     transition: left 1s ease;
 }
 
 article:nth-of-type(1) > img:nth-child(1) {
     position: absolute;
-    top: -15%;
+    top: -10%;
     right: 7%;
 }
 
@@ -256,13 +246,13 @@ article:nth-of-type(1) > img:nth-child(1) {
 .chincheta2 {
     position: absolute;
     left: 0px;
-    top: -15%;
+    top: -10%;
     transition: left 1s ease;
 }
 
 article:nth-of-type(2) > img:nth-child(1) {
     position: absolute;
-    top: -15%;
+    top: -10%;
     right: 40%;
 }
 
@@ -270,72 +260,53 @@ article:nth-of-type(2) > img:nth-child(1) {
 .chincheta3 {
     position: absolute;
     left: 0px;
-    top: -15%;
+    top: -10%;
     transition: left 1s ease;
 }
 
 article:nth-of-type(3) > img:nth-child(1) {
     position: absolute;
-    top: -15%;
+    top: -10%;
     left: 7%;
 }
 
-article:nth-of-type(3) > img:nth-child(1) {
-    position: absolute;
-    top: -15%;
-    left: 7%;
+article img:nth-child(2) {
+    width: 100%;
 }
 
-article img:nth-child(2){
-
-    width: 300px;
-
-}
-
-.img-js{
-
+.img-js {
     background-image: radial-gradient(red, yellow, green);
-
 }
 
 article > h1 {
-
-    font-size: 25px;
+    font-size: 1.5rem;
     font-family: Abel;
-
 }
 
-article > text{
-
-    font-size: 20px;
+article > text {
+    font-size: 1.2rem;
     font-family: Abel;
-
 }
 
-text{
-
+text {
     display: flex;
     text-align: center;
-    font-size: 18px;
+    font-size: 1rem;
     border-top: solid 1px black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 5px;
-
+    margin: 0.5em;
 }
 
 /* FOOTER */
-
-footer{
-
+footer {
     background: linear-gradient(to bottom, #3e9bc9, #0870b7);
-    border-top: solid 10px black;
-    border-radius: 0px 0px 35px 35px ;
+    border-top: solid 0.5em black;
+    border-radius: 0 0 2em 2em;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 1px;
+    padding: 0.5em;
     color: white;
     width: 100%;
-
+    font-size: 0.8rem;
 }
 
 /* Ocultar el botón de menú por defecto */
@@ -343,57 +314,76 @@ footer{
     display: none;
 }
 
-
 @media (max-width: 1024px) {
-    /* Ajustes para el contenedor principal */
-    #page {
-      width: 90%;
-      min-width: 320px;
-    }
-  
-    /* Ajustes para el header */
     header {
-      font-size: 0.7em;
+        flex-direction: column;
+        text-align: center;
     }
-  
-    /* Ajustes para los elementos <li> en la barra de navegación */
-    nav ul li {
-      margin: 0 8% 2%;
+
+    header > h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    article {
+        width: 50%;
+        margin: 1em 0;
     }
 }
 
 @media (max-width: 700px) {
-    /* Ajustes para los elementos <li> en la barra de navegación */
-    nav ul li {
-      margin: 0 4% 1%;
+    header > h1 {
+        font-size: 1.2rem;
     }
+
+    nav img {
+        width: 2rem;
+    }
+
 }
 
 @media (max-width: 475px) {
-    /* Estilos para los elementos <li> en la barra de navegación */
-    nav ul li {
-        margin: 0; /* Márgenes de los <li> a 0 */
+    header > a > img {
+        width: 3rem;
     }
 
-    /* Estilos para el enlace vacío (.menu-toggle) */
-    .menu-toggle {
+    header > h1 {
+        font-size: 1rem;
+    }
+
+    .menu{
         display: block;
-        width: 80px;
-        height: 80px;
-        background: url('../img/menu.png') no-repeat center 10px; /* Imagen de fondo */
-        background-size: contain; /* Ajustar tamaño de la imagen */
-        margin: 0 auto; /* Márgenes superior e inferior: 0; izquierdo y derecho: automáticos */
+        width: 2rem;
+        height: 2rem;
+        background: url('../img/menu.png') no-repeat center;
+        background-size: contain;
+        margin: 0 auto 0.5em;
     }
 
-    /* Ocultar inicialmente el menú */
     nav ul {
         display: none;
     }
 
-    /* Mostrar el menú cuando tenga la clase .desplegado */
     nav ul.desplegado {
-        display: block;
-        flex-direction: column; /* Opcional: Menú vertical */
-        text-align: center; /* Centrar contenido del menú */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 65%;
+        margin: 0.5em 0;
+    }
+
+    footer {
+        font-size: 0.7rem;
     }
 }

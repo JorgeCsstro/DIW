@@ -1,14 +1,15 @@
 var enlaceMenu;
 
-function iniciarMenu() 
-{
-	enlaceMenu = document.querySelector("#page>nav>a");
+function iniciarMenu() {
+	enlaceMenu = document.querySelector("main>nav>.menu");
 	enlaceMenu.addEventListener("click", despliegaMenu, false);
 }
 
-function despliegaMenu()
-{
-	document.querySelector("#page>nav>ul").classList.toggle('desplegado');
+function despliegaMenu(){
+	let menuItems = document.querySelectorAll("main>nav>ul");
+    menuItems.forEach((menu) => {
+        menu.classList.toggle('desplegado');
+    });
 }
 
 window.addEventListener("load", iniciarMenu, false);

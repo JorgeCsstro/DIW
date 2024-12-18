@@ -6,8 +6,8 @@ function mueveChincheta1() {
     chincheta1.classList.add('chincheta1');
     
     setTimeout(() => {
-        // Mueve a la izquierda 250px
-        chincheta1.style.left = '250px';
+        // Mueve a la izquierda 80%
+        chincheta1.style.left = '80%';
     }, 0);
     // 0 milisegundos de retardo
 }
@@ -29,8 +29,8 @@ function mueveChincheta2() {
     chincheta2.classList.add('chincheta2');
     
     setTimeout(() => {
-        // Mueve la chincheta a la posición 150px
-        chincheta2.style.left = '150px';
+        // Mueve la chincheta a la posición 50%
+        chincheta2.style.left = '50%';
     }, 1050);
     // 1050 milisegundos de retardo
 }
@@ -44,7 +44,7 @@ function mueveChincheta3() {
     
     setTimeout(() => {
         // Mueve la chincheta a la izquierda 50px
-        chincheta3.style.left = '50px';
+        chincheta3.style.left = '20%';
     }, 2000);
     // 2000 milisegundos de retardo
 }
