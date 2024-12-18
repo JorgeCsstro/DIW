@@ -337,3 +337,63 @@ footer{
     width: 100%;
 
 }
+
+/* Ocultar el botón de menú por defecto */
+.menu-toggle {
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+    /* Ajustes para el contenedor principal */
+    #page {
+      width: 90%;
+      min-width: 320px;
+    }
+  
+    /* Ajustes para el header */
+    header {
+      font-size: 0.7em;
+    }
+  
+    /* Ajustes para los elementos <li> en la barra de navegación */
+    nav ul li {
+      margin: 0 8% 2%;
+    }
+}
+
+@media (max-width: 700px) {
+    /* Ajustes para los elementos <li> en la barra de navegación */
+    nav ul li {
+      margin: 0 4% 1%;
+    }
+}
+
+@media (max-width: 475px) {
+    /* Estilos para los elementos <li> en la barra de navegación */
+    nav ul li {
+        margin: 0; /* Márgenes de los <li> a 0 */
+    }
+
+    /* Estilos para el enlace vacío (.menu-toggle) */
+    .menu-toggle {
+        display: block;
+        width: 80px;
+        height: 80px;
+        background: url('../img/menu.png') no-repeat center 10px; /* Imagen de fondo */
+        background-size: contain; /* Ajustar tamaño de la imagen */
+        margin: 0 auto; /* Márgenes superior e inferior: 0; izquierdo y derecho: automáticos */
+    }
+
+    /* Ocultar inicialmente el menú */
+    nav ul {
+        display: none;
+    }
+
+    /* Mostrar el menú cuando tenga la clase .desplegado */
+    nav ul.desplegado {
+        display: block;
+        flex-direction: column; /* Opcional: Menú vertical */
+        text-align: center; /* Centrar contenido del menú */
+    }
+}
