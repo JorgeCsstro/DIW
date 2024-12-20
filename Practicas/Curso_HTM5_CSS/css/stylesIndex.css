@@ -10,6 +10,8 @@
 
 /*--- BODY Y MAIN ---*/
 
+/* -Resumen cambio responsive: He cambiado la gran mayoria de campos de px a % o em*/
+
 body {
     height: fit-content;
     background: linear-gradient(rgba(215, 78, 51, 255), white);

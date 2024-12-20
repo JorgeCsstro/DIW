@@ -15,6 +15,8 @@
 
 /*--- BODY Y MAIN ---*/
 
+/* -Resumen cambio responsive: He cambiado la gran mayoria de campos de px a % o em*/
+
 body {
     height: fit-content;
     max-width: 100%;
@@ -191,10 +193,11 @@ main nav {
     transition: width 0.3s ease;
 }
 
-/* --- Target para cambiar videos del HTML ---*/
 .video-container {
     display: none;
 }
+
+/* --- Target para cambiar videos del HTML ---*/
 
 #video1:target, #video2:target, #video3:target {
     display: block;
