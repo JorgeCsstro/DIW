@@ -15,7 +15,7 @@
 
 /*--- BODY Y MAIN ---*/
 
-/* -Resumen cambio responsive: He cambiado la gran mayoria de campos de px a % o em*/
+/* -Resumen cambio responsive: He cambiado la gran mayoria de campos de px a %, em o vh y mediaqueries para diferentes tamaños*/
 
 body {
     height: fit-content;
