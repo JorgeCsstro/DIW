@@ -1,85 +1,469 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Mediterráneo a bocados</title>
-    <link rel="icon" type="image/x-icon" href="./imagenes/icono.png">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Mockup Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #958989;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px;
+            padding: 25px;
+            background-color: rgba(71, 118, 228, 0.546);
+            position: relative;
+            z-index: 1;  /* Ensure header is above the image placeholder */
+            border-bottom: 1px solid #ccc;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header .menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        header input[type="search"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        body > .image-placeholder {
+            width: 100%;
+            height: 600px;  /* Height to extend below the header */
+            background-color: #ccc;
+            position: absolute;
+            top: 0px;
+            z-index: -1;  /* Ensure it goes behind the header */
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .button-group button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            margin-top: 350px;
+        }
+
+        .carousel span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: #2c3074;
+            border-radius: 50%;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: #222;
+            color: #fff;
+            margin-top: 1000px;
+        }
+
+        footer .footer-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        footer .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        footer .social-icons i {
+            font-size: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            gap: 40px;
+            justify-content: space-between;
+            position: relative;
+            top: 150px;
+            left: 10%;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 35%;
+            height: 150px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            font-size: 3em;
+            color: #b98b0c;
+        }
+
+        .propo {
+            background-image: url(./imagenes/nuestro-proposito.jpg);
+            background-size: cover; 
+            background-position: center center;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+
+        .porque{
+            background-image: url(./imagenes/porque.avif);
+            background-size: cover; 
+            background-position: center center;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+
+        .socio{
+            background-image: url(./imagenes/socio.jpeg);
+            background-size: cover; 
+            background-position: center center;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+
+        .ayuda{
+            background-image: url(./imagenes/ayuda.jpeg);
+            background-size: cover; 
+            background-position: center center;
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: overlay;
+        }
+
+        .center-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 400px;
+            z-index: 2;
+        }
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+
+        .firm-soci {
+            position: relative;
+            top: 250px;
+            display: flex;
+            flex-direction: column; /* Stack rows vertically */
+            justify-content: center; /* Center rows horizontally */
+            align-items: center; /* Align items to the center */
+            gap: 20px;
+        }
+
+        .firm-soci .row {
+            display: flex;
+            justify-content: space-between; /* Space out the number and image */
+            align-items: center; /* Center items vertically */
+            gap: 20px; /* Spacing between items */
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column; /* Stack text vertically */
+            align-items: center; /* Center text horizontally */
+            justify-content: center;
+            flex: 1 1 auto;
+            text-align: center;
+        }
+
+        .item img {
+            max-width: 700px;
+            max-height: 300px; 
+            width: 700px;
+            height: auto;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block
+        }
+
+        .img-left {
+            position: relative;
+            left: 10%;
+        }
+
+        .img-right {
+            position: relative;
+            right: 10%;
+        }
+
+
+        .number {
+            font-size: 10em;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .text-row{
+
+            font-size: 2em;
+
+        }
+
+        .campaigns-section {
+            text-align: center;
+            margin-top: 300px;
+            padding: 20px;
+        }
+
+        .campaigns-section h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            font-family: 'Arial', sans-serif;
+            color: #2c3074;
+        }
+
+        .carousel-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .carousel-buttons .dot {
+            width: 15px;
+            height: 15px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-buttons .dot.active {
+            background-color: #2c3074;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 60%;
+            margin: 0 auto;
+            overflow: hidden; /* Hides items outside the visible area */
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Animation for sliding */
+        }
+
+        .campaign {
+            flex: 0 0 33.33%; /* Each campaign takes up 1/3 of the container */
+            max-width: 300px;
+            margin: 10px;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .campaign img {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-
 <body>
-
     <header>
-        <div class="container">
-            <img src="./imagenes/logo.png" alt="" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#about">Sobre nosotros</a></li>
-                    <li><a href="#vision">Nuestra Vision</a></li>
-                    <li><a href="#history">Historia</a></li>
-                    <li><a href="#contact">Apoyanos</a></li>
-                </ul>
-            </nav>
+        <div class="logo">🌊 El Mediterraneo a Bocados</div>
+        <div class="menu">
+            <div class="button-group">
+                <button>Button</button>
+                <button>Button</button>
+                <button>Button</button>
+                <button>Button</button>
+            </div>            
+            <i>📺</i>
+            <i>❌</i>
+            <i>📷</i>
+            <input type="search" placeholder="Search">
+            <div>👤 Cuenta</div>
+            <div>🌐 ES</div>
         </div>
     </header>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Quienes somos?</h2>
-            <p>Somos una asociación la cual se centra en conservar los sabores del Mediterráneo para promover la tradición culinaria de esta región, destacando la riqueza de sus ingredientes autóctonos y técnicas ancestrales. Nos esforzamos por proteger y difundir la identidad gastronómica mediterránea, apoyando a productores locales y fomentando una alimentación sana, sostenible y respetuosa con el medio ambiente. A través de nuestras iniciativas, buscamos que las futuras generaciones puedan seguir disfrutando de la esencia y autenticidad de estos sabores únicos.</p>
+    <div class="image-placeholder"><img src="./videos/arrozabanda.gif" alt="Front page gifs" id="front-gifs"></div>
+
+    <div class="hero-section">
+        <div class="carousel">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </section>
+    </div>
 
-    <section id="vision" class="vision">
-        <div class="container">
-            <h2>Nuestra vision</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in accumsan nibh. Aenean tempor vestibulum libero. In scelerisque mi magna.</p>
+    <div class="container">
+        <div class="box propo">Nuestro Propósito</div>
+        <div class="box porque">¿Por qué?</div>
+        <div class="box socio">Hazte Socio</div>
+        <div class="box ayuda">Ayúdanos</div>
+        <div class="center-box"><img src="./imagenes/jamon.png" alt=""></div>
+    </div>
+
+    <div class="firm-soci">
+        <div class="row">
+            <div class="item">
+                <div class="number">243.243</div>
+                <div class="text-row">Firmas Conseguidas</div>
+            </div>
+            <div class="item">
+                <img class="img-left" src="./imagenes/solidaridad-imagen.jpg" alt="Solidaridad"> 
+            </div>
         </div>
-    </section>
 
-    <section id="history" class="history">
-        <div class="container">
-            <h2>Historia</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in accumsan nibh. Aenean tempor vestibulum libero. In scelerisque mi magna.</p>
-            <img src="./imagenes/mediterraneo.png" alt="" class="mediterraneo-image">
+        <div class="row">
+            <div class="item">
+                <img class="img-right" src="./imagenes/handshake.jpg" alt="Handshake"> 
+            </div>
+            <div class="item">
+                <div class="number">243.243</div>
+                <div class="text-row">Son Socios</div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <form action="#" method="post">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="dono">Donacion:</label>
-                <select name="dono" id="dono">
-                    <option value="1€">1€</option>
-                    <option value="5€">5€</option>
-                    <option value="10€">10€</option>
-                    <option value="15€">15€</option>
-                    <option value="20€">20€</option>
-                    <option value="25€">25€</option>
-                </select>
-
-                <button type="submit">Enviar</button>
-            </form>
+    <div class="campaigns-section">
+        <h1>Campañas</h1>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="campaign">
+                    <img src="./imagenes/tapas-campana.jpg" alt="Campaign 1">
+                    <h2>Campaña 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Firma</a>
+                </div>
+                <div class="campaign">
+                    <img src="./imagenes/aceite-campana.jpeg" alt="Campaign 2">
+                    <h2>Campaña 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Firma</a>
+                </div>
+                <div class="campaign">
+                    <img src="./imagenes/arroz-campana.jpg" alt="Campaign 3">
+                    <h2>Campaña 3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Firma</a>
+                </div>
+                <div class="campaign">
+                    <img src="./imagenes/aceituna-campana.jpg" alt="Campaign 4">
+                    <h2>Campaña 4</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Firma</a>
+                </div>
+                <div class="campaign">
+                    <img src="./imagenes/jamon-campana.jpg" alt="Campaign 5">
+                    <h2>Campaña 5</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#">Firma</a>
+                </div>
+            </div>
         </div>
-    </section>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192.5242963630765!2d-0.3862849246448349!3d39.460545710908605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604fae7ec2e589%3A0x1de2f317ce01afdf!2sMi%20Electro%20-%20Vicente%20Noverges!5e0!3m2!1ses!2ses!4v1726160806783!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="carousel-buttons">
+            <div class="dot active" data-index="0"></div>
+            <div class="dot" data-index="1"></div>
+            <div class="dot" data-index="2"></div>
+        </div>
+    </div>
+    
 
     <footer>
-        <div class="container">
-            <p>© 2024 Mi Portafolio</p>
+        <div class="footer-links">
+            <a href="#">Hazte Socio</a>
+            <a href="#">¿Por qué?</a>
+            <a href="#">Propósito</a>
+            <a href="#">Ayúdanos</a>
+        </div>
+        <div class="social-icons">
+            <i>📺</i>
+            <i>❌</i>
+            <i>📷</i>
         </div>
     </footer>
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const dots = document.querySelectorAll('.carousel-buttons .dot');
 
+        const buttonWidth = document.querySelector('.campaign').offsetWidth + 20; // Campaign width + margin
+        const campaignsPerView = 3; // Number of campaigns visible at a time
+        const totalCampaigns = document.querySelectorAll('.campaign').length;
+        const totalViews = Math.ceil(totalCampaigns / campaignsPerView);
+
+        function updateCarousel(index) {
+            const shiftAmount = Math.min(index * buttonWidth, (totalCampaigns - campaignsPerView) * buttonWidth); // Ensure shift does not exceed total campaigns
+            track.style.transform = `translateX(-${shiftAmount}px)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                updateCarousel(index);
+            });
+        });
+    </script>
+    
 </body>
-
 </html>
