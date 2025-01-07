@@ -1,0 +1,398 @@
+
+/* Fuente importada*/
+@font-face {
+    font-family: "Dancing Script";
+    src: url("./fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: Dancing Script;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+    padding: 25px;
+    background-color: rgba(71, 118, 228, 0.546);
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid #ccc;
+    color: black;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header .logo-img {
+    width: 75px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    object-fit: cover;
+}
+
+.cuenta{
+    font-size: 24px;
+}
+
+.cuenta a{
+    text-decoration: none;
+    color: #000000;
+}
+
+header .menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 4vw;
+    color: #333;
+    margin: 10px 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.menu-icon img{
+
+    width: 40px;
+    height: 40px;
+    visibility:hidden;
+
+}
+
+/* Mostrar de sidebar */
+#menu-toggle:checked ~ .sidebar {
+    right: 0;
+}
+
+/* SIDEBAR */
+
+/* MENU PARA PC */
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button-group .btn-header {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid rgb(194, 152, 0);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+    color: #000000;
+    text-decoration: none;
+}
+
+.btn-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(194, 152, 0);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btn-header:hover::before {
+    transform: translateX(0);
+}
+/* MENU PARA PC */
+/* HEADER */
+
+/* Migas de pan */
+.breadcrumbs {
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: #b5b5b5;
+    border-radius: 5px;
+    position: absolute;
+    left: 50px;
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #000000;
+}
+
+/* Migas de pan */
+
+/* FORMULARIO DE REGISTRO*/
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(219, 86, 86, 0.9) 0%, rgba(255, 138, 22, 0.9) 50%, rgba(239, 192, 52, 0.9) 100%);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.register-container h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 25px;
+    font-size: 42px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000000;
+    font-size: 24px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus {
+    border-color: #6a11cb;
+    outline: none;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.3);
+}
+
+input:required {
+    background: url('../imagenes/required.png') no-repeat 100% 0;
+}
+
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button] ):not([type=checkbox]):not([type=number]):focus:invalid {
+background: url('../imagenes/invalid.png') no-repeat 100% 0;
+
+}
+
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button] ):not([type=checkbox]):not([type=number]):focus:valid {
+background: url('../imagenes/valid.png') no-repeat 100% 0;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: #000000;
+}
+
+.form-footer a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* FORMULARIO DE REGISTRO*/
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #222;
+    color: #fff;
+    margin-top: 155px;
+}
+
+footer .footer-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+footer .social-icons i {
+    font-size: 20px;
+}
+
+/* FOOTER */
+
+/* Para Ordenador */
+
+@media (min-width: 950px) {
+    .menu-icon {
+        visibility: hidden;
+    }
+
+    .sidebar {
+        visibility: hidden;
+    }
+}
+
+/* Para Mobiles */
+
+@media (max-width: 1200px) {
+
+    /* Quita menu de botones */
+    .button-group,
+    .top {
+        display: none;
+    }
+
+    /* Muestra el menu img */
+    .menu-icon img {
+        display: block;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        visibility: visible;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+        z-index: 100;
+        visibility: hidden;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+        text-decoration: none;
+        color: #333;
+        margin: 10px 0;
+    }
+
+    /* Boton para cerrar */
+    .sidebar .close-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #333;
+    }
+
+    /* Mostrar de sidebar */
+    #menu-toggle:checked ~ .sidebar {
+        left: 0;
+        visibility: visible;
+    }
+}
