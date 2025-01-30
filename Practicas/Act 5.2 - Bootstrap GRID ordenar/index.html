@@ -16,6 +16,26 @@
       margin: 5px;
     }
 
+    .head, .foot{
+        background-color: rgb(87, 236, 87);
+    }
+
+    .numbers > *{
+        background-color: rgb(145, 145, 214);
+    }
+
+    .dispo > *{
+        background-color: rgb(0, 250, 250);
+    }
+
+    .abcd > *{
+        background-color: rgb(175, 175, 175);
+    }
+
+    .faces > *{
+        background-color: rgb(221, 135, 77);
+    }
+
   </style>
 </head>
 
@@ -24,11 +44,11 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col col-12">
+      <div class="col col-12 head">
         Header
       </div>
     </div>
-    <div class="row">
+    <div class="row numbers">
         <div class="col col-6 col-sm-3 offset-md-3">
             1
         </div>
@@ -43,12 +63,12 @@
             4
         </div>
     </div>
-    <div class="row">
+    <div class="row dispo">
         <div class="col col-12 d-none d-sm-block d-md-none">
             TABLET
         </div>
     </div>
-    <div class="row">
+    <div class="row abcd">
         <div class="col col-6 col-sm-3 order-md-4">
             a
         </div>
@@ -62,17 +82,17 @@
             d
         </div>
     </div>
-    <div class="row">
+    <div class="row dispo">
         <div class="col col-12 d-none d-md-block">
             DESKTOP
         </div>
     </div>
-    <div class="row">
+    <div class="row dispo">
         <div class="col col-12 d-block d-sm-none">
             MOBILE
         </div>
     </div>
-    <div class="row">
+    <div class="row faces">
         <div class="col col-12 col-sm-6 col-md-3 order-md-2">
             :D
         </div>
@@ -80,7 +100,7 @@
             :(
         </div>
     </div>
-    <div class="row">
+    <div class="row foot">
         <div class="col col-12 d-none d-sm-block">Footer</div>
     </div>
     
