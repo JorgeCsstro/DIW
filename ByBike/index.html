@@ -4,18 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByBike_Jorge</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff;
+        }
+        .nav-link:hover, .dropdown-item:hover {
+            color: #ffc107;
+        }
+        .carousel-caption {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+        }
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+        
+        .collapse .card-body {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
 
     <!-- Barra de Navegación -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="./imgs/logo.png" alt="Logo" width="52" height="38" class="d-inline-block align-text-top">
-                ByBike
+                <img src="./imgs/logo.png" alt="Logo" width="52" height="36" class="d-inline-block align-text-top">
+                <p class="d-inline-block align-text-top">ByBike</p>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,7 +124,7 @@
                     Información sobre quiénes somos.
                 </div>
             </div>
-            <button class="btn btn-primary  mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#referencias" aria-expanded="false" aria-controls="referencias">
+            <button class="btn btn-primary mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#referencias" aria-expanded="false" aria-controls="referencias">
                 Referencias
             </button>
             <div class="collapse" id="referencias">
@@ -75,7 +136,6 @@
     </div>
 
     <!-- Carrusel -->
-
     <div class="row mt-4 d-flex justify-content-center">
         <div class="col col-12 col-sm-10 col-md-8 col-lg-6 mx-auto">
             <div id="carouselExampleLight" class="carousel slide" data-bs-ride="carousel">
@@ -89,7 +149,7 @@
                         <img src="./imgs/bici2.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-sm-block">
                             <h5>Nuestras mejores bicicletas</h5>
-                            <p>Pudes acceder a todas nuestas bicicletas disponibles</p>
+                            <p>Puedes acceder a todas nuestras bicicletas disponibles</p>
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
@@ -118,7 +178,6 @@
             </div>
         </div>
     </div>
-    
 
     <!-- Artículos -->
     <div class="container mt-4">
@@ -170,21 +229,18 @@
                     <label for="mensaje" class="form-label">Mensaje</label>
                     <textarea class="form-control" id="mensaje" rows="3" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary mb-4">Enviar</button>
             </form>
         </div>
     </div>
-    
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-light">
+    <footer class="footer mt-auto py-3">
         <div class="container text-center">
-            <span class="text-muted">© 2023 Tu Nombre. Todos los derechos reservados.</span>
+            <span>© 2025 Jorge Castro Tramoyeres. Todos los derechos reservados.</span>
         </div>
     </footer>
-    
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
