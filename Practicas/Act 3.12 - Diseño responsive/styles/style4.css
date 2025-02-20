@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Margen entre elementos */
+body > * {
+    margin: 5px;
+}
+
+nav {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    text-align: left;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 10px;
+    text-decoration: none;
+    color: #444;
+}
+
+nav ul li a:hover {
+    background-color: #ccc;
+}
+
+nav>a {
+    display: none;
+}
+
+header {
+    flex: 1 1 100%; /* Toma 100% del ancho */
+    background-color: #00356e;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+}
+
+main {
+    flex: 2 1 calc(75% - 10px);/* Toma 3/4 del ancho */
+    background-color: #cccccc;
+    padding: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+aside {
+    flex: 1 1 calc(25% - 10px);/* Toma 1/4 del ancho */
+    background-color: #aaaaaa;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media all and (max-width: 475px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    nav, header, main, aside {
+        flex: 1 1 100%; /* Todos los elementos ocupan un 100% de el ancho */
+        margin: 5px 0;
+    }
+
+    nav ul { /*Oculta la lista del nav*/
+        display: none;
+    }
+
+    nav>a{
+        display: block;
+        padding: 0 1em 0;
+        text-align: center;
+        padding: 10px 15px;
+        color: #fff;
+        background-color: #0084B4;
+        text-decoration: none;
+        margin: 3px;
+    }
+
+    /* Y cuando se clicke el nav, se desplegará  */
+    ul.desplegado {
+        display: block;
+        list-style: none;
+    }
+
+    ul.desplegado li {
+        display: block;
+        text-align: center;
+    }
+
+    ul.desplegado li a {
+        display: block;
+        border-bottom: 1px solid #ccc;
+    }
+}

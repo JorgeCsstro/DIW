@@ -3,40 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> 
     <title>Curso de HTML y CSS</title>
     <link rel="icon" type="image/x-icon" href="./img/logo.png">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/stylesIndex.css">
+    <script src="./js/animacion.js" defer></script>
+    <script src="./js/menu.js" defer></script>
 </head>
 
-<body>
+<!--Cuando carges la página empezarán las animaciones-->
+<body onload="mueveChincheta1(); animArticle1(); mueveChincheta2(); mueveChincheta3(); animArticle3();">
     <main>
         <header>
-            <h1 class="titulo">Curso de HTML5 y CSS3</h1>
+            <a href="./index.html"><img src="./img/logo.png" alt="Logo del curso"></a>
+            <h1>Curso de HTML5 y CSS3</h1>
         </header>
 
+        <!-- Menú -->
         <nav>
-            <ul class="contenidos">
+            <a href="#" class="menu"></a>
+            <ul>
                 <a href=""><img src="./img/book.png"></a>
-                <p class="nav-texto">Contenidos</p>
+                <p>Contenidos</p>
             </ul>
-
+        
             <ul class="videos">
-                <a href=""><img src="./img/film.png"></a>
-                <p class="nav-texto">Vídeos</p>
+                <a href="./videos.html#video1"><img src="./img/film.png"></a>
+                <p>Vídeos</p>
+                <ul class="submenuVid">
+                    <li><a href="./videos.html#video1">Video 1</a></li>
+                    <li><a href="./videos.html#video2">Video 2</a></li>
+                    <li><a href="./videos.html#video3">Video 3</a></li>
+                </ul>
             </ul>
-
-            <ul class="contacto">
-                <a href=""><img src="./img/mail.png"></a>
-                <p class="nav-texto">Contacto</p>
+        
+            <ul>
+                <a href="./contacto.html"><img src="./img/mail.png"></a>
+                <p>Contacto</p>
             </ul>
-
         </nav>
+
+        <!-- Seccion principal -->
+
         <section>
-            <article class="html">
-                <figure class="img-html">
-                    <img src="./img/html5.png">
-                </figure>
+            <article>
+                <img src="./img/chincheta.png">
+
+                <img src="./img/html5.png">
+
                 <h1>HTML5</h1>
 
                 <text>
@@ -52,10 +66,11 @@
                 </text>
             </article>
 
-            <article class="css">
-                <figure class="img-css">
-                    <img src="./img/css3.png">
-                </figure>
+            <article>
+                <img src="./img/chincheta.png">
+
+                <img src="./img/css3.png">
+
                 <h1>CSS3</h1>
 
                 <text>
@@ -67,10 +82,10 @@
                 </text>
             </article>
 
-            <article class="js">
-                <figure class="img-js">
-                    <img src="./img/javascript.png">
-                </figure>
+            <article>
+                <img src="./img/chincheta.png">
+                <img src="./img/javascript.png" class="img-js">
+
                 <h1>JavaScript</h1>
 
                 <text>
@@ -85,11 +100,12 @@
 
         <footer>
             <pre>
-                    HTML5 y CSS3.
-                    Diseño de interfaces web - 2DAW
-                </pre>
+                HTML5 y CSS3.
+                Diseño de interfaces web - Jorge Castro Tramoyeres 2DAW
+            </pre>
         </footer>
     </main>
+    
 </body>
 
 </html>

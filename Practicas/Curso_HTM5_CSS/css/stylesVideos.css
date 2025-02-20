@@ -1,0 +1,301 @@
+@font-face {
+    font-family: "LuckiestGuy";
+    src: url("../fuentes/LuckiestGuy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Abel";
+    src: url("../fuentes/Abel-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Aguafina";
+    src: url("../fuentes/AguafinaScript-Regular.ttf");
+}
+
+/*--- BODY Y MAIN ---*/
+
+/* -Resumen cambio responsive: He cambiado la gran mayoria de campos de px a %, em o vh y mediaqueries para diferentes tamaños*/
+
+body {
+    height: fit-content;
+    max-width: 100%;
+    background: linear-gradient(rgba(215, 78, 51, 255), white);
+    padding: 1em;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    max-width: 90%;
+    gap: 2%;
+}
+
+/*------ HEADER ------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background: linear-gradient(to top, #3e9bc9, #0870b7);
+    border-bottom: solid 0.5em black;
+    border-radius: 2em 2em 0 0;
+    padding: 1em;
+}
+
+header > h1 {
+    font-family: LuckiestGuy;
+    letter-spacing: 0.3em;
+    color: white;
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+header > a > img {
+    width: 4em;
+    margin-right: 1em;
+}
+
+/*------ MENUS ------*/
+
+body > nav {
+    display: flex;
+    justify-content: space-around;
+    width: 105%;
+    height: fit-content;
+    background: linear-gradient(to top, #ffdc40, #ab901a);
+    text-align: center;
+    position: relative;
+}
+
+nav img {
+    margin-top: 1em;
+    width: 3em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul > p {
+    font-family: LuckiestGuy;
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0.1em 0.1em #f06529;
+    transition: text-shadow 0.5s ease;
+}
+
+ul > p:hover {
+    text-shadow: 0 0 0.3em #ff7e42;
+}
+
+/*--- SUBMENU VIDEO ---*/
+
+.videos {
+    position: relative;
+}
+
+.videos:hover .submenuVid {
+    display: block;
+}
+
+.submenuVid {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e34c26;
+    border-radius: 0 0 0.5em 0.5em;
+    padding: 0.5em 0;
+    width: 6em;
+    text-align: center;
+    z-index: 10;
+}
+
+.submenuVid::before {
+    content: "";
+    position: absolute;
+    top: -0.5em;
+    transform: translateX(-50%);
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.5em solid #e34c26;
+}
+
+.submenuVid li {
+    margin: 0.2em 0;
+}
+
+.submenuVid li:nth-child(odd) {
+    background-color: #f06529;
+}
+
+.submenuVid li:hover {
+    background-color: #ff7e42;
+}
+
+.submenuVid li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5em;
+}
+
+/*------ VIDEO ------*/
+
+#reproductor {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    border: 0.5em solid lightgrey;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: 2em 0;
+}
+
+#reproductor video {
+    width: 90%;
+    max-height: 60vh;
+}
+
+main nav {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    margin-top: 150px;
+}
+
+#barra {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    border-top: 10px solid lightgrey;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#progreso {
+    width: 0;
+    height: 100%;
+    background-color: #0870b7;
+    transition: width 0.3s ease;
+}
+
+.video-container {
+    display: none;
+}
+
+/* --- Target para cambiar videos del HTML ---*/
+
+#video1:target, #video2:target, #video3:target {
+    display: block;
+}
+
+/*--- Botones de reproductor ---*/
+
+nav input[type="button"] {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 150px;
+}
+
+nav input[type="button"]:hover {
+    background-color: darkred;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/*------ FOOTER ------*/
+
+footer {
+    background: linear-gradient(to bottom, #3e9bc9, #0870b7);
+    border-top: solid 0.5em black;
+    border-radius: 0 0 2em 2em;
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    font-size: 1em;
+    width: 100%;
+}
+
+/*--- MEDIA QUERIES ---*/
+
+@media (max-width: 970px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #reproductor {
+        margin-bottom: 20px;
+    }
+
+    main nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    main nav input[type="button"] {
+        width: auto;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 475px) {
+    header > a > img {
+        width: 2em;
+    }
+
+    header > h1 {
+        font-size: 1.2em;
+    }
+
+    .menu {
+        display: block;
+        width: 2em;
+        height: 2em;
+        background: url('../img/menu.png') no-repeat center;
+        background-size: contain;
+        margin: 0 auto 0.5em;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.desplegado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+}

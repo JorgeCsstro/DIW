@@ -1,0 +1,393 @@
+@font-face {
+    font-family: "LuckiestGuy";
+    src: url("../fuentes/LuckiestGuy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Abel";
+    src: url("../fuentes/Abel-Regular.ttf");
+}
+
+/*--- BODY Y MAIN ---*/
+
+/* -Resumen cambio responsive: He cambiado la gran mayoria de campos de px a %, em o vh y mediaqueries para diferentes tamaños*/
+
+body {
+    height: fit-content;
+    background: linear-gradient(rgba(215, 78, 51, 255), white);
+    padding: 1em 1.5em;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: fit-content;
+    width: 90%;
+    border-radius: 2em;
+    box-shadow: 0.5em 0.5em 0.5em gray;
+}
+
+/*------ HEADER ------*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #3e9bc9, #0870b7);
+    border-bottom: solid 0.5em black;
+    border-radius: 2em 2em 0 0;
+    padding: 1em;
+}
+
+header > * {
+    margin: 0.5em;
+}
+
+header > h1 {
+    font-family: LuckiestGuy;
+    letter-spacing: 0.3em;
+    color: white;
+    margin-left: 1em;
+    font-size: 2rem;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+header > a > img {
+    width: 4rem;
+    margin-right: 1em;
+    animation: rotateLogo 5s infinite;
+}
+
+/*------ MENUS ------*/
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #ffdc40, #ab901a);
+    text-align: center;
+    position: relative;
+    padding: 1em;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+nav img {
+    margin-top: 1em;
+    width: 2rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul > p {
+    font-family: LuckiestGuy;
+    letter-spacing: 0.2em;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0.1em 0.1em #f06529;
+    transition: text-shadow 0.5s ease;
+}
+
+ul > p:hover {
+    text-shadow: 0 0 0.3em #ff7e42;
+}
+
+/*--- SUBMENU VIDEO ---*/
+
+.videos {
+    position: relative;
+}
+
+.videos:hover .submenuVid {
+    display: block;
+}
+
+.submenuVid {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e34c26;
+    border-radius: 0 0 0.5em 0.5em;
+    padding: 0.5em 0;
+    width: 6em;
+    text-align: center;
+    z-index: 10;
+}
+
+.submenuVid::before {
+    content: "";
+    position: absolute;
+    top: -0.5em;
+    transform: translateX(-50%);
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-bottom: 0.5em solid #e34c26;
+}
+
+.submenuVid li {
+    margin: 0.2em 0;
+}
+
+.submenuVid li:nth-child(odd) {
+    background-color: #f06529;
+}
+
+.submenuVid li:hover {
+    background-color: #ff7e42;
+}
+
+.submenuVid li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5em;
+}
+
+/* PAGINA PRINCIPAL */
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    text-align: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+article {
+    position: relative;
+    border: 2em solid transparent;
+    border-image: url(../img/movil.png) 50 20 50 20 stretch;
+    margin: 2em;
+    padding-top: 1em;
+    width: calc(100% / 4 - 2em);
+    background-color: white;
+}
+
+/* Animaciones de articulos */
+@keyframes animArticle1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+.article1 {
+    animation: animArticle1 0.5s forwards;
+}
+
+@keyframes animArticle3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+.article3 {
+    animation: animArticle3 0.5s forwards;
+}
+
+/*----------*/
+
+article:nth-of-type(1){
+
+    transform: rotate(-10deg);
+
+}
+
+article:nth-of-type(3){
+
+    transform: rotate(10deg);
+
+}
+
+/* Chincheta */
+
+/*Animacion chincheta1*/
+.chincheta1 {
+    position: absolute;
+    left: 0px;
+    top: -10%;
+    transition: left 1s ease;
+}
+
+article:nth-of-type(1) > img:nth-child(1) {
+    position: absolute;
+    top: -10%;
+    right: 7%;
+}
+
+/*Animacion chincheta2*/
+.chincheta2 {
+    position: absolute;
+    left: 0px;
+    top: -10%;
+    transition: left 1s ease;
+}
+
+article:nth-of-type(2) > img:nth-child(1) {
+    position: absolute;
+    top: -10%;
+    right: 40%;
+}
+
+/*Animacion chincheta3*/
+.chincheta3 {
+    position: absolute;
+    left: 0px;
+    top: -10%;
+    transition: left 1s ease;
+}
+
+article:nth-of-type(3) > img:nth-child(1) {
+    position: absolute;
+    top: -10%;
+    left: 7%;
+}
+
+article img:nth-child(2) {
+    width: 100%;
+}
+
+.img-js {
+    background-image: radial-gradient(red, yellow, green);
+}
+
+article > h1 {
+    font-size: 1.5rem;
+    font-family: Abel;
+}
+
+article > text {
+    font-size: 1.2rem;
+    font-family: Abel;
+}
+
+text {
+    display: flex;
+    text-align: center;
+    font-size: 1rem;
+    border-top: solid 1px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0.5em;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(to bottom, #3e9bc9, #0870b7);
+    border-top: solid 0.5em black;
+    border-radius: 0 0 2em 2em;
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
+/*--- MEDIA QUERIES ---*/
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header > h1 {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    article {
+        width: 50%;
+        margin: 1em 0;
+    }
+}
+
+@media (max-width: 700px) {
+    header > h1 {
+        font-size: 1.2rem;
+    }
+
+    nav img {
+        width: 2rem;
+    }
+
+}
+
+@media (max-width: 475px) {
+    header > a > img {
+        width: 3rem;
+    }
+
+    header > h1 {
+        font-size: 1rem;
+    }
+
+    .menu{
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        background: url('../img/menu.png') no-repeat center;
+        background-size: contain;
+        margin: 0 auto 0.5em;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.desplegado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    article {
+        width: 65%;
+        margin: 0.5em 0;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}

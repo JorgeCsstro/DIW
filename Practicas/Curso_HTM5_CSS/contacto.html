@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> 
+    <title>Contacto - Curso de HTML y CSS</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./css/stylesContacto.css">
+    <script src="./js/menuVid.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="./index.html"><img src="./img/logo.png" alt="Logo del curso"></a>
+        <h1>Curso de HTML5 y CSS3</h1>
+    </header>
+
+    <!-- Menú -->
+
+    <nav>
+        <a href="#" class="menu"></a>
+        <ul>
+            <a href=""><img src="./img/book.png"></a>
+            <p>Contenidos</p>
+        </ul>
+
+        <ul class="videos">
+            <a href="./videos.html#video1"><img src="./img/film.png"></a>
+            <p>Vídeos</p>
+            <ul class="submenuVid">
+                <li><a href="./videos.html#video1">Video 1</a></li>
+                <li><a href="./videos.html#video2">Video 2</a></li>
+                <li><a href="./videos.html#video3">Video 3</a></li>
+            </ul>
+        </ul>
+        <ul>
+            <a href="./contacto.html"><img src="./img/mail.png"></a>
+            <p>Contacto</p>
+        </ul>
+    </nav>
+
+    <!-- Seccion principal -->
+     
+    <main>
+        <div class="form-container">
+            <form action="#" method="POST" class="form">
+                <h2 class="form-title">Contáctanos</h2>
+                <div class="form-group">
+                    <img src="./img/icon-nombre.png" alt="Name-icon" class="form-img">
+                    <input type="text" id="name" name="name" placeholder="Escriba su nombre" list="name-options" required>
+                    <label></label>
+                    <datalist id="name-options">
+                        <option value="alex">
+                        <option value="juan">
+                        <option value="ana">
+                        <option value="pedro">
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <img src="./img/icon-correo.png" alt="Email-icon" class="form-img">
+                    <input type="email" id="email" name="email" placeholder="Escriba su email" required>
+                    <label></label>
+                </div>
+                <div class="form-group">
+                    <img src="./img/icon-mensaje.png" alt="Message-icon" class="form-img">
+                    <textarea id="message" name="message" placeholder="Su mensaje..." rows="8" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <pre>
+            HTML5 y CSS3.
+            Diseño de interfaces web - Jorge Castro Tramoyeres 2DAW
+        </pre>
+    </footer>
+</body>
+</html>

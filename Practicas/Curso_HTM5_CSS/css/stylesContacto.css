@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "LuckiestGuy";
+    src: url("../fuentes/LuckiestGuy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Abel";
+    src: url("../fuentes/Abel-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Aguafina";
+    src: url("../fuentes/AguafinaScript-Regular.ttf");
+}
+
+/* -Resumen cambio responsive: He cambiado la gran mayoria de campos de px a %, em o vh y mediaqueries para diferentes tamaños*/
+
+/*--- BODY Y MAIN ---*/
+
+body {
+    height: auto;
+    width: 100%;
+    background: linear-gradient(rgba(215, 78, 51, 255), white);
+    padding: 15px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-image: url("../img/fondoForm.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*--- HEADER ---*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #3e9bc9, #0870b7);
+    border-bottom: solid 10px black;
+    border-radius: 35px 35px 0px 0px;
+}
+
+header > * {
+    padding: 20px;
+}
+
+header > h1 {
+    font-family: LuckiestGuy;
+    letter-spacing: 5px;
+    color: white;
+    margin-left: 20px;
+    font-size: 36px;
+}
+
+header > a > img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    background: linear-gradient(to top, #ffdc40, #ab901a);
+    text-align: center;
+    position: relative;
+}
+
+nav img {
+    margin-top: 20px;
+}
+
+ul {
+    margin: 0;
+}
+
+ul > p {
+    font-family: LuckiestGuy;
+    letter-spacing: 5px;
+    font-size: 28px;
+    width: fit-content;
+    color: white;
+    text-shadow: 2px 2px #f06529;
+    transition: text-shadow 0.5s ease;
+}
+
+ul > p:hover {
+    text-shadow: 0px 0px 5px #ff7e42;
+}
+
+/*--- SUBMENU VIDEO ---*/
+
+.videos:hover .submenuVid {
+    display: block;
+}
+
+.submenuVid {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background: #e34c26;
+    border-radius: 0 0 10px 10px;
+    padding: 5px 0;
+    width: 100px;
+    text-align: center;
+    z-index: 10;
+}
+
+.submenuVid::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    transform: translateX(-50%);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid #e34c26;
+}
+
+.submenuVid li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.submenuVid li:nth-child(odd) {
+    background-color: #f06529;
+}
+
+.submenuVid li:hover {
+    background-color: #ff7e42;
+}
+
+.submenuVid li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 5px 10px;
+}
+
+/*--- FORM CONTACTO ---*/
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px; 
+    max-width: 800px;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(217, 217, 217, 0.5);
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.form-title {
+    position: absolute;
+    top: -45px;
+    left: 80%;
+    transform: translateX(-50%);
+    font-family: "Aguafina";
+    font-size: 32px;
+    color: #333;
+    letter-spacing: 7px;
+    font-style: italic;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-shadow: 0px 0px 2px #777;
+    padding: 0px 10px 0px 10px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    border: 3px solid #ffffff;
+    width:90%;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 0px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+input:required + label::after {
+    content: '*';
+    color: rgb(0, 0, 0);
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+input:focus:invalid {
+    background: url('../img/invalid.png') no-repeat 100% center;
+}
+
+input:focus:valid {
+    background: url('../img/valid.png') no-repeat 100% center;
+}
+
+.form-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.form button {
+    width: 75px;
+    height: 45px;
+    background: linear-gradient(to bottom, #5e5e5e, #2a2a2a);
+    color: white;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.4s ease-in;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.form button:hover {
+    background: linear-gradient(to bottom, #2a2a2a, #5e5e5e);
+    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+/*--- FOOTER ---*/
+
+footer {
+    background: linear-gradient(to bottom, #3e9bc9, #0870b7);
+    border-top: solid 0.5em black;
+    border-radius: 0 0 2em 2em;
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    font-size: 1em;
+    width: 100%;
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+    body {
+        margin-left: 0;
+    }
+
+    nav ul > p {
+        font-size: 20px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-group input, textarea {
+        width: 100%;
+    }
+
+    .form {
+        padding: 10px;
+        width: calc(100% - 40px);
+    }
+    
+}
+
+@media (max-width: 475px) {
+    header > a > img {
+        width: 2em;
+    }
+
+    header > h1 {
+        font-size: 1.2em;
+    }
+
+    .menu {
+        display: block;
+        width: 2em;
+        height: 2em;
+        background: url('../img/menu.png') no-repeat center;
+        background-size: contain;
+        margin: 0 auto 0.5em;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.desplegado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        font-size: 0.7em;
+    }
+}

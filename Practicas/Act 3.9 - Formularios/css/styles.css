@@ -1,0 +1,112 @@
+/*Importo font tahoma*/
+@font-face {
+    font-family: "FuenteBoton";
+    src: url("../fuentes/tahoma.ttf");
+}
+
+/*--BODY & MAIN--*/
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: "FuenteBoton";
+    font-weight: bold;
+}
+
+main {
+    width: 75%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #aaaaaa;
+    text-align: center;
+}
+
+/*--FORMULARIO--*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../imgs/bg-form.png") no-repeat 0 100%;
+    background-size: 100%;
+}
+
+/*Pongo 2 backgrounds para el titulo*/
+h1{
+    width: 100%;
+    background: 
+        url(../imgs/bg-formtitle-left.png) no-repeat 0 0,
+        url(../imgs/bg-formtitle-right.png) no-repeat 100% 0;
+    background-size: 100px;
+}
+
+/*Pongo la letra "normal" porque en el body la he puesto "bold"*/
+p{
+    font-weight: normal;
+}
+
+/*Pongo margen de arriba para más separación*/
+label{
+    margin-top: 20px;
+}
+
+/*Mas significante:
+    Quito los bordes
+    Pongo el mismo background que el main
+    Pongo borde de abajo con puntos
+*/
+input {
+    width: 80%;
+    padding: 10px;
+    background-color: #aaaaaa;
+    margin: 10px 0;
+    border: none;
+    border-bottom: dotted 3px;
+    text-align: center;
+    font-size: 20px;
+}
+
+input[type="number"] {
+    width: fit-content;
+    text-align: center;
+}
+
+input[type="date"] {
+    text-align: center;
+}
+
+/*Pongo backgrounds img dependiendo del estado de los inputs*/
+input:required {
+    background: url('../imgs/required.png') no-repeat 100% 0;
+}
+
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button] ):not([type=checkbox]):not([type=number]):focus:invalid {
+background: url('../imgs/invalid.png') no-repeat 100% 0;
+
+}
+
+input:not([type=range]):not([type=date]):not([type=submit]):not([type=button] ):not([type=checkbox]):not([type=number]):focus:valid {
+background: url('../imgs/valid.png') no-repeat 100% 0;
+}
+
+/*Boton de enviar*/
+button {
+    padding: 10px;
+    background: radial-gradient(circle, rgb(176, 176, 176) 10%, rgb(72, 72, 72) 25%);
+    color: white;
+    font-size: 32px;
+    font-family: "FuenteBoton";
+    border: none;
+    border-radius: 10px;
+    opacity: 0.75;
+    cursor: pointer;
+    transition: opacity 0.25s linear;
+    width: 50%;
+}
+
+button:hover {
+    opacity: 1;
+}
