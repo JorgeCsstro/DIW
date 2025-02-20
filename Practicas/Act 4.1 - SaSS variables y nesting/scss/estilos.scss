@@ -1,0 +1,54 @@
+// Variables
+
+$color-prin: #e07d10;
+$color-sec: #0077b6;
+
+$text-color: #333;
+$font-family: 'Georgia', serif;
+$title-font-size: 32px;
+$text-font-size: 16px;
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  margin: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+
+  .title {
+    font-size: $title-font-size;
+    font-weight: bold;
+    
+    &:not(.highlight) {
+      text-transform: uppercase;
+    }
+  }
+
+  .primer{
+    color: $color-prin;
+    text-align: center;
+  }
+
+  .segundo {
+    color: $color-sec;
+    text-align: left;
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: $text-font-size;
+    text-align: justify;
+
+    &::first-line {
+      font-style: italic;
+    }
+  }
+
+  .segundo + p + p,
+  .segundo + p + p + p {
+    text-align: right;
+  }
+}
